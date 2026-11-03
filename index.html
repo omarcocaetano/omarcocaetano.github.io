@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materiais do Marco</title>
+<meta name="description" content="Materiais dos vídeos do @omarcocaetano: estratégias de marketing e vendas simplificadas para o dono de negócio local.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: coluna única pensada para o celular, fundo quase preto, verde-limão como assinatura (identidade do Marco) */
+  --bg: #0A0C0A;
+  --card: #161A16;
+  --card-2: #1d221d;
+  --line: #2a312a;
+  --text: #F6F8F0;
+  --muted: #a7ae9f;
+  --lime: #D6FF1F;
+  --on-lime: #0A0C0A;
+  --display: "Anton", "Arial Narrow", Impact, sans-serif;
+  --body: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+strong { font-weight: 700; }
+
+.mark {
+  background: var(--lime); color: var(--on-lime);
+  padding: .05em .22em; border-radius: 3px; font-weight: 600;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+
+/* Topo */
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-badge {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--lime); color: var(--on-lime);
+  display: grid; place-items: center;
+  font-family: var(--display); font-size: 1.25rem;
+}
+.brand-name { font-weight: 700; font-size: .95rem; line-height: 1.2; }
+.brand-name small { display: block; font-weight: 400; font-size: .75rem; color: var(--muted); }
+.ig-link { font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--lime); }
+.ig-link:hover { text-decoration: underline; }
+
+/* Capa da home */
+.hero { padding: 48px 0 32px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.5rem, 10vw, 3.8rem); line-height: 1.02;
+  margin: 0 0 18px; text-transform: uppercase; text-wrap: balance; letter-spacing: .005em;
+}
+.hero h1 em { font-style: normal; color: var(--lime); }
+.hero p { margin: 0; max-width: 34em; color: var(--muted); font-size: 1.02rem; }
+
+/* Lista de posts */
+.list-label { font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; color: var(--muted); margin: 8px 0 14px; }
+.posts { display: grid; gap: 14px; padding-bottom: 56px; }
+.post-card {
+  display: grid; gap: 10px; text-decoration: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px;
+  transition: border-color .15s, transform .15s;
+}
+.post-card:hover { border-color: var(--lime); transform: translateY(-2px); }
+.post-card h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 1.65rem; line-height: 1.08; text-transform: uppercase; text-wrap: balance; }
+.post-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .78rem; color: var(--muted); }
+.chip { font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; padding: 4px 10px; border-radius: 99px; background: var(--lime); color: var(--on-lime); }
+.chip.soft { background: transparent; color: var(--text); border: 1px solid var(--line); }
+
+/* Artigo */
+.back { display: inline-block; margin: 24px 0 0; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--muted); }
+.back:hover { color: var(--lime); }
+article { padding: 22px 0 40px; }
+article h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.3rem, 9vw, 3.4rem); line-height: 1.03; text-transform: uppercase;
+  margin: 16px 0 14px; text-wrap: balance; letter-spacing: .005em;
+}
+.byline { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin: 0 0 26px; }
+.byline b { color: var(--text); font-weight: 600; }
+.byline a { color: var(--lime); text-decoration: none; }
+.lead { font-size: 1.12rem; line-height: 1.6; margin: 0 0 14px; }
+article h2 {
+  font-family: var(--display); font-weight: 400; text-transform: uppercase;
+  font-size: 1.7rem; line-height: 1.08; margin: 44px 0 12px; text-wrap: balance; letter-spacing: .01em;
+}
+article h2 .n { color: var(--lime); }
+article p { margin: 0 0 16px; }
+article ul, article ol { margin: 0 0 18px; padding-left: 1.2em; display: grid; gap: 8px; }
+article li::marker { color: var(--lime); }
+.src { font-size: .78rem; color: var(--muted); margin-top: -6px; }
+.quote {
+  margin: 36px 0; padding: 24px; border-radius: 16px;
+  background: var(--card); border: 1px solid var(--lime);
+  font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.8rem; line-height: 1.1; text-wrap: balance;
+}
+.quote span { color: var(--lime); }
+
+/* Checklist interativo */
+.checklist { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
+.checklist label {
+  display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; cursor: pointer;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+}
+.checklist input { appearance: none; -webkit-appearance: none; margin: 3px 0 0; width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: grid; place-items: center; cursor: pointer; background: transparent; }
+.checklist input:checked { background: var(--lime); border-color: var(--lime); }
+.checklist input:checked::after { content: ""; width: 6px; height: 11px; border: solid var(--on-lime); border-width: 0 3px 3px 0; transform: rotate(45deg) translate(-1px,-1px); }
+.checklist strong { display: block; }
+.checklist .hint { color: var(--muted); font-size: .9rem; }
+.score { font-size: .92rem; font-weight: 600; margin: 0 0 18px; font-variant-numeric: tabular-nums; }
+.score b { background: var(--lime); color: var(--on-lime); padding: 0 6px; border-radius: 4px; }
+
+.script-box { background: var(--card); border: 1px dashed var(--muted); border-radius: 12px; padding: 16px 18px; margin: 0 0 18px; }
+.script-box .lbl { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--lime); }
+.script-box p { margin: 4px 0 0; }
+
+/* Cartões de resposta com botão Copiar */
+.reply { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin: 0 0 14px; display: grid; gap: 12px; }
+.reply-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.reply-tag { font-weight: 700; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--lime); }
+.bubble { background: var(--card-2); border-radius: 4px 14px 14px 14px; padding: 14px 16px; font-size: 1rem; line-height: 1.6; }
+.slot { background: rgba(214,255,31,.16); color: var(--lime); border: 1px dashed var(--lime); border-radius: 5px; padding: 0 .3em; font-weight: 600; white-space: nowrap; }
+.when { margin: 0; font-size: .88rem; color: var(--muted); }
+.when b { color: var(--text); }
+.copy-btn {
+  font: 700 .8rem var(--body); padding: 8px 14px; border-radius: 99px; cursor: pointer;
+  border: 1px solid var(--lime); background: transparent; color: var(--lime); white-space: nowrap;
+}
+.copy-btn:hover, .copy-btn.ok { background: var(--lime); color: var(--on-lime); }
+.reply.filled { border-style: dashed; }
+
+/* Bloco destacado */
+.callout { background: var(--card); border-left: 4px solid var(--lime); border-radius: 0 16px 16px 0; padding: 20px 20px 4px; margin: 0 0 18px; }
+.callout h2 { margin-top: 0; }
+
+/* Calculadora */
+.calc { background: var(--card); border: 1px solid var(--lime); border-radius: 16px; padding: 18px; margin: 0 0 18px; display: grid; gap: 14px; }
+.calc-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.calc label { display: grid; gap: 6px; font-size: .8rem; font-weight: 600; color: var(--muted); }
+.calc input { font: 700 1.1rem var(--body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; font-variant-numeric: tabular-nums; }
+.calc-out { margin: 0; font-size: .98rem; font-variant-numeric: tabular-nums; }
+
+/* Calendário de semanas */
+.weeks { display: grid; gap: 14px; margin: 0 0 22px; }
+.week { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--lime); border-radius: 0 16px 16px 0; padding: 20px 20px 4px; }
+.week h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.45rem; line-height: 1.1; margin: 10px 0 8px; }
+.week-tag { display: inline-block; font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; padding: 4px 10px; border-radius: 99px; background: var(--lime); color: var(--on-lime); font-variant-numeric: tabular-nums; }
+.week .script-box { background: var(--bg); }
+
+/* CTA final */
+.cta { background: var(--card); border: 1px solid var(--line); border-radius: 18px; margin-top: 40px; padding: 24px; display: grid; gap: 14px; }
+.cta h3 { margin: 0; font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.7rem; line-height: 1.08; text-wrap: balance; }
+.cta p { margin: 0; color: var(--muted); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  font: 800 .95rem var(--body); padding: 14px 20px; border-radius: 99px; cursor: pointer; text-decoration: none; text-align: center;
+  border: 2px solid var(--lime); background: var(--lime); color: var(--on-lime);
+}
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
+.btn:hover { transform: translateY(-1px); }
+@media (max-width: 420px) { .btn-row .btn { flex: 1 1 100%; } }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: .82rem; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+footer a { color: var(--lime); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .post-card:hover, .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Página inicial">
+      <span class="brand-badge" aria-hidden="true">M</span>
+      <span class="brand-name">Marco Antônio<small>Marketing e vendas para negócio local</small></span>
+    </a>
+    <a class="ig-link" href="https://www.instagram.com/omarcocaetano/" target="_blank" rel="noopener">@omarcocaetano</a>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<footer>
+  <div class="wrap">
+    <span>Marco Antônio · Araguaína, TO · <a href="https://www.instagram.com/omarcocaetano/" target="_blank" rel="noopener">@omarcocaetano</a></span>
+    <span>Viu o vídeo? O material completo fica aqui.</span>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   POSTS — para publicar um material novo, adicione um objeto
+   no início desta lista. O "slug" vira o link: .../#slug
+   ========================================================= */
+const POSTS = [
+  {
+    slug: "cliente-pediu-desconto",
+    titulo: "Cliente pediu desconto? 3 respostas para vender sem baixar o preço",
+    apoio: "Copie, troque o que está destacado pelo dado do seu negócio e use hoje no seu WhatsApp.",
+    resumo: "As 3 respostas prontas para quando o cliente ouve o preço e pede desconto. É só copiar e usar no seu atendimento.",
+    data: "2026-11-03",
+    pilar: "Vendas e atendimento",
+    palavra: "DESCONTO",
+    ctaTitulo: "Quer que eu olhe o atendimento e os anúncios do seu negócio?",
+    ctaTexto: "Eu analiso como o seu WhatsApp está atendendo e o que os seus anúncios estão dizendo, e te mostro onde as vendas estão escapando.",
+    wppMsg: "Oi Marco, vim pelo vídeo do desconto e quero ajuda com o meu atendimento.",
+    corpo: `
+      <p class="lead">O cliente ouviu o preço e pediu desconto. Nessa hora, muita gente baixa o valor na primeira mensagem. <span class="mark">Quem dá desconto de primeira trabalha mais para ganhar menos.</span></p>
+      <p>E novembro deixa isso mais forte. Na Black Friday do ano passado, o valor médio de cada compra no comércio online caiu 12,8%. O cliente chega com o desconto na cabeça e vai pedir. A diferença está no que você responde.</p>
+      <p class="src">Fonte: Confi Neotrust, Black Friday 2025 no e-commerce brasileiro.</p>
+
+      <h2><span class="n">1.</span> Descubra o motivo</h2>
+      <p>Antes de qualquer coisa, entenda por que ele pediu. Pode ser que o valor passou do que ele planejou. Pode ser que viu mais barato em outro lugar. Cada motivo pede uma resposta diferente.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Resposta 1</span><button class="copy-btn" type="button" data-copy="r1">Copiar</button></div>
+        <div class="bubble" id="r1">Entendo! Me conta uma coisa para eu te ajudar melhor: o valor passou do que você tinha planejado ou você viu mais barato em outro lugar?</div>
+        <p class="when"><b>Quando usar:</b> sempre, logo que o cliente pedir desconto. É ela que te diz qual das outras duas mandar.</p>
+      </div>
+
+      <h2><span class="n">2.</span> Passou do orçamento? Mude a condição, não o preço</h2>
+      <p>Se o problema é quanto sai do bolso agora, você não precisa mexer no valor. Mostre que dá para dividir, ou ofereça uma opção parecida que cabe no que ele planejou.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Resposta 2</span><button class="copy-btn" type="button" data-copy="r2">Copiar</button></div>
+        <div class="bubble" id="r2">Sem problema, a gente resolve. Essa peça dá para dividir em 3x de R$ <span class="slot">[valor]</span>. E se preferir, tenho uma bem parecida por R$ <span class="slot">[valor]</span>. Quer que eu te mande a foto?</div>
+        <p class="when"><b>Quando usar:</b> o cliente disse que o valor passou do que ele tinha planejado.</p>
+      </div>
+
+      <h2><span class="n">3.</span> Viu mais barato? Mostre o que o outro não entrega</h2>
+      <p>Aqui o cliente está comparando. Se você só baixa o preço, vira disputa de quem cobra menos. Mostre o que vem junto com a compra no seu negócio.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Resposta 3</span><button class="copy-btn" type="button" data-copy="r3">Copiar</button></div>
+        <div class="bubble" id="r3">Entendo, é bom comparar mesmo. Só te conto o que vem junto aqui: <span class="slot">[diferencial 1]</span>, <span class="slot">[diferencial 2]</span> e <span class="slot">[diferencial 3]</span>. Quer que eu já separe o seu tamanho?</div>
+        <p class="when"><b>Quando usar:</b> o cliente disse que viu mais barato em outro lugar.</p>
+      </div>
+      <div class="reply filled">
+        <div class="reply-head"><span class="reply-tag">Exemplo: loja de roupas</span><button class="copy-btn" type="button" data-copy="r3b">Copiar</button></div>
+        <div class="bubble" id="r3b">Entendo, é bom comparar mesmo. Só te conto o que vem junto aqui: tecido de maior qualidade, ajuste da barra na hora e troca em 30 dias. Quer que eu já separe o seu tamanho?</div>
+        <p class="when"><b>Dica:</b> numa clínica pode ser retorno incluso. Numa academia, avaliação física. Escolha o que o seu concorrente não oferece.</p>
+      </div>
+      <p>Na prática, com essas três respostas o seu atendimento online fecha mais vendas e perde menos clientes no meio da conversa.</p>
+
+      <div class="callout">
+        <h2>E no seu anúncio?</h2>
+        <p>Se o seu anúncio só traz gente pedindo desconto, o problema pode estar na mensagem dele. Anúncio que fala só de preço atrai quem só quer preço.</p>
+        <p>Mostre a qualidade do produto: o tecido, o acabamento, o atendimento, a garantia. Assim chega no seu WhatsApp quem quer comprar, e não só quem quer pechinchar.</p>
+      </div>
+
+      <div class="quote">Quem dá desconto de primeira <span>ensina o cliente a sempre pedir.</span></div>
+    `
+  },
+  {
+    slug: "black-friday-negocio-local",
+    titulo: "Black Friday: como vender mais sem trabalhar de graça",
+    resumo: "Desconto sem conta vira prejuízo. Faça a conta do desconto e siga o calendário de três semanas para vender antes da sexta, dia 27.",
+    data: "2026-11-02",
+    pilar: "Vendas e atendimento",
+    palavra: "BLACK",
+    corpo: `
+      <p class="lead">Todo ano é a mesma coisa: o empresário coloca 30% de desconto na loja inteira, vende bastante e, no fim do mês, descobre que <span class="mark">trabalhou muito para lucrar menos do que num mês normal.</span></p>
+      <p>A Black Friday deste ano cai no dia <strong>27 de novembro</strong>. Dá tempo de fazer do jeito certo. Deixa eu te mostrar como.</p>
+
+      <h2>1. Faça a conta antes de dar o desconto</h2>
+      <p>Pense comigo: quando você dá desconto, ele sai inteiro do seu lucro, não do preço. Se você ganha pouco em cada venda, um desconto pequeno já come boa parte da margem. Para compensar, você precisa vender muito mais.</p>
+      <p>Coloque os números de um produto seu e veja quanto precisa vender a mais só para empatar:</p>
+      <div class="calc" id="calc">
+        <div class="calc-fields">
+          <label for="cp">Preço de venda (R$)<input id="cp" type="number" inputmode="decimal" min="0" step="0.01" value="100"></label>
+          <label for="cc">Quanto ele te custa (R$)<input id="cc" type="number" inputmode="decimal" min="0" step="0.01" value="60"></label>
+          <label for="cd">Desconto (%)<input id="cd" type="number" inputmode="decimal" min="0" max="100" step="1" value="20"></label>
+        </div>
+        <p class="calc-out" id="calc-out" aria-live="polite"></p>
+      </div>
+      <p>Por isso, desconto de verdade vai em produto com margem boa ou em produto parado no estoque. No resto, existem saídas melhores.</p>
+
+      <h2>2. Troque desconto por vantagem</h2>
+      <p>Nem toda oferta precisa ser porcentagem. Algumas opções que pesam menos no seu bolso e chamam tanto a atenção quanto:</p>
+      <ul>
+        <li><strong>Brinde:</strong> compre o produto principal e leve um item de custo baixo.</li>
+        <li><strong>Kit:</strong> junte dois ou três produtos num preço fechado. O cliente sente que economizou e você vende mais peças.</li>
+        <li><strong>Frete grátis ou entrega no mesmo dia</strong> em Araguaína.</li>
+        <li><strong>Condição só para quem entrar na lista:</strong> o cliente se cadastra antes e recebe a oferta primeiro.</li>
+      </ul>
+
+      <h2>3. Venda antes da sexta: o calendário de três semanas</h2>
+      <p>A Black Friday deixou de ser uma sexta-feira. Em novembro de 2024, <span class="mark">as semanas antes da Black responderam por 75% das vendas do mês no comércio online</span>, segundo a Confi.Neotrust. Só um quarto saiu dos quatro dias da Black.</p>
+      <p>Na prática, o seu cliente decide antes. Se a sua promoção só aparece na semana da Black, ele já comprou de quem chegou primeiro. Por isso, a sua Black começa agora, em três semanas:</p>
+
+      <div class="weeks">
+        <div class="week">
+          <span class="week-tag">Semana 1 · até 15/11</span>
+          <h3>Abra a conversa</h3>
+          <p>O objetivo desta semana é um só: fazer o cliente te chamar no WhatsApp. Você ainda não mostra preço, você convida para a lista que recebe as ofertas primeiro.</p>
+          <p>Imagine uma loja de roupa. Ela posta hoje:</p>
+          <div class="script-box"><span class="lbl">Post ou Stories</span><p>"Vai ter Black aqui na loja. Quem me chamar no WhatsApp entra na lista e recebe as ofertas um dia antes de todo mundo."</p></div>
+          <ul>
+            <li>Salve todo mundo que chamar numa <strong>etiqueta ou lista de transmissão</strong> com o nome "Black".</li>
+            <li>Se for anunciar, o anúncio desta semana <strong>não vende a oferta, ele traz a conversa</strong>. O botão leva direto para o WhatsApp.</li>
+          </ul>
+        </div>
+
+        <div class="week">
+          <span class="week-tag">Semana 2 · 16 a 22/11</span>
+          <h3>Mostre o que vem</h3>
+          <p>Agora você cria vontade. O cliente começa a imaginar o que vai comprar, e quem ainda não entrou na lista tem mais um motivo para entrar.</p>
+          <ul>
+            <li><strong>Stories com os produtos chegando:</strong> caixa abrindo, arara sendo montada, a peça na mão.</li>
+            <li><strong>Enquete:</strong> "Qual dessas peças você quer ver em promoção?". Você descobre o que o cliente quer e ele sente que participou da escolha.</li>
+            <li>Repita o convite: "a lista recebe primeiro, me chama no WhatsApp".</li>
+          </ul>
+        </div>
+
+        <div class="week">
+          <span class="week-tag">Semana 3 · 23 a 26/11</span>
+          <h3>Avise primeiro quem levantou a mão</h3>
+          <p>Antes da sexta, a oferta vai para a lista. Essa pessoa já conversou com você, já disse o que quer e compra antes, sem você disputar preço com loja grande no dia 27.</p>
+          <div class="script-box"><span class="lbl">Mensagem para a lista</span><p>"Oi, [nome]! Como prometido, você recebe antes de todo mundo: [oferta]. Vale até [dia]. Quer que eu separe a sua?"</p></div>
+          <ul>
+            <li>Comece pelas peças mais votadas na enquete da semana 2.</li>
+            <li>Na sexta, a oferta abre para todo mundo. A essa altura, boa parte da sua venda já aconteceu.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>No seu negócio, isso vira uma decisão simples: <strong>o anúncio de agora traz a conversa, e a oferta vai para quem já conversou com você.</strong></p>
+
+      <h2>4. Prepare o atendimento para o pico</h2>
+      <p>Não adianta o anúncio funcionar se o WhatsApp trava. Antes do dia, deixe pronto:</p>
+      <ul class="checklist" id="chk">
+        <li><label><input type="checkbox" id="b1"><span><strong>Respostas rápidas salvas</strong><span class="hint">Preço, formas de pagamento, entrega e troca. Ninguém digita a mesma coisa 50 vezes.</span></span></label></li>
+        <li><label><input type="checkbox" id="b2"><span><strong>Catálogo atualizado</strong><span class="hint">Com preço da Black e foto real de cada produto.</span></span></label></li>
+        <li><label><input type="checkbox" id="b3"><span><strong>Escala da equipe no horário de pico</strong><span class="hint">Alguém dedicado só ao WhatsApp no dia.</span></span></label></li>
+        <li><label><input type="checkbox" id="b4"><span><strong>Estoque conferido</strong><span class="hint">Nada queima mais a sua marca do que vender o que não tem.</span></span></label></li>
+        <li><label><input type="checkbox" id="b5"><span><strong>Regra de troca clara</strong><span class="hint">Escrita na mensagem, para evitar discussão depois.</span></span></label></li>
+      </ul>
+      <p class="score" id="score" aria-live="polite"></p>
+
+      <div class="quote">Na Black Friday, o desconto chama atenção. <span>Quem chega antes fica com a venda.</span></div>
+
+      <h2>5. A venda não acaba no dia 27</h2>
+      <p>Quem comprou na Black já confiou em você uma vez. Uma semana depois, mande uma mensagem perguntando se gostou do produto. Em dezembro, essa pessoa é a primeira da sua lista para as compras de Natal.</p>
+      <p>Salva este material e manda para quem vai cuidar do seu WhatsApp na Black.</p>
+    `
+  },
+  {
+    slug: "checklist-atendimento-whatsapp",
+    titulo: "O checklist do atendimento que transforma mensagem em venda",
+    resumo: "Seu anúncio faz o WhatsApp tocar. O que acontece depois disso decide se vira venda. Use este checklist com a sua equipe.",
+    data: "2026-11-02",
+    pilar: "Vendas e atendimento",
+    palavra: "ATENDIMENTO",
+    corpo: `
+      <p class="lead">Você investe no anúncio, o WhatsApp enche de mensagem e mesmo assim a venda não vem. <span class="mark">Na maioria das vezes, o problema não está no anúncio. Está no que acontece depois do "oi".</span></p>
+      <p>Pense comigo: o cliente que te chamou já levantou a mão. Ele viu o seu produto, se interessou e tomou a iniciativa. Se ele sai da conversa sem comprar, o dinheiro do anúncio foi embora junto.</p>
+      <p>Esse checklist é para você rodar com quem cuida do seu atendimento. Marque o que a sua equipe já faz hoje.</p>
+
+      <h2>O checklist</h2>
+      <ul class="checklist" id="chk">
+        <li><label><input type="checkbox" id="c1"><span><strong>Responde rápido no horário de pico</strong><span class="hint">Quem chama uma loja costuma chamar outras ao mesmo tempo. Quem responde primeiro sai na frente.</span></span></label></li>
+        <li><label><input type="checkbox" id="c2"><span><strong>Chama o cliente pelo nome</strong><span class="hint">Parece detalhe. Na prática, é o que tira a conversa do automático.</span></span></label></li>
+        <li><label><input type="checkbox" id="c3"><span><strong>Faz uma pergunta antes de mandar o preço</strong><span class="hint">"É para você ou para presente?", "Qual tamanho você usa?". Quem entende a necessidade vende melhor.</span></span></label></li>
+        <li><label><input type="checkbox" id="c4"><span><strong>Manda foto ou vídeo real do produto</strong><span class="hint">Foto da arara, vídeo do produto na mão. Isso passa mais confiança do que a foto de catálogo.</span></span></label></li>
+        <li><label><input type="checkbox" id="c5"><span><strong>Conduz para o próximo passo</strong><span class="hint">Toda mensagem termina com um convite: "separo para você?", "prefere retirar ou receber em casa?".</span></span></label></li>
+        <li><label><input type="checkbox" id="c6"><span><strong>Retoma quem parou de responder</strong><span class="hint">Uma mensagem educada no dia seguinte recupera venda que você daria como perdida.</span></span></label></li>
+        <li><label><input type="checkbox" id="c7"><span><strong>Pós-venda depois da entrega</strong><span class="hint">Perguntar se o cliente gostou abre espaço para a próxima compra e para a indicação.</span></span></label></li>
+      </ul>
+      <p class="score" id="score" aria-live="polite">Sua equipe faz <b>0 de 7</b>.</p>
+
+      <h2>Duas mensagens prontas para usar hoje</h2>
+      <div class="script-box"><span class="lbl">Primeira resposta</span><p>"Oi, [nome]! Que bom que você chamou. Me conta: você está procurando para você ou para presente?"</p></div>
+      <div class="script-box"><span class="lbl">Retomada no dia seguinte</span><p>"Oi, [nome]! Ontem você me perguntou sobre [produto]. Ainda tenho no seu tamanho. Quer que eu separe para você?"</p></div>
+
+      <div class="quote">A venda não acontece quando você quer. <span>Ela acontece quando você permanece.</span></div>
+
+      <h2>No seu negócio, isso vira...</h2>
+      <p>Imprima esse checklist, ou mande este link para quem cuida do seu WhatsApp. Por uma semana, peça para a equipe marcar o que fez em cada atendimento. Você vai enxergar exatamente onde as vendas estão escapando.</p>
+      <p>O anúncio traz o cliente. <strong>Quem fecha a venda é o atendimento.</strong></p>
+    `
+  }
+];
+
+const IG = "https://www.instagram.com/omarcocaetano/";
+const WPP = "https://wa.me/556391114789";
+const wppLink = p => WPP + "?text=" + encodeURIComponent(p.wppMsg || ("Oi, Marco! Li o material \"" + p.titulo + "\" e quero conversar sobre o meu negócio."));
+
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e2) { return false; }
+  }
+}
+function wireCopy() {
+  document.querySelectorAll("[data-copy]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const el = document.getElementById(btn.dataset.copy);
+      const ok = await copyText(el.innerText.trim());
+      btn.textContent = ok ? "Copiado" : "Selecione e copie";
+      btn.classList.toggle("ok", ok);
+      setTimeout(() => { btn.textContent = "Copiar"; btn.classList.remove("ok"); }, 2200);
+    });
+  });
+}
+const app = document.getElementById("app");
+
+function fmtData(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+}
+
+function renderHome() {
+  document.title = "Materiais do Marco";
+  app.innerHTML = `
+    <section class="hero">
+      <h1>Estratégias de marketing <em>para você aplicar</em> no seu negócio</h1>
+      <p>Aqui ficam os materiais completos dos meus vídeos: checklists, mensagens prontas e o passo a passo para colocar em prática.</p>
+    </section>
+    <p class="list-label">Materiais publicados</p>
+    <div class="posts">
+      ${POSTS.map(p => `
+        <a class="post-card" href="#${p.slug}">
+          <span class="meta"><span class="chip">${p.pilar}</span><span>${fmtData(p.data)}</span></span>
+          <h2>${p.titulo}</h2>
+          <p>${p.resumo}</p>
+        </a>`).join("")}
+    </div>`;
+  window.scrollTo(0, 0);
+}
+
+function renderPost(p) {
+  document.title = p.titulo + " · Marco Antônio";
+  app.innerHTML = `
+    <a class="back" href="#inicio">← Todos os materiais</a>
+    <article>
+      <span class="meta"><span class="chip">${p.pilar}</span><span class="chip soft">Palavra-chave: ${p.palavra}</span><span>${fmtData(p.data)}</span></span>
+      <h1>${p.titulo}</h1>
+      ${p.apoio ? `<p class="lead">${p.apoio}</p>` : ""}
+      <p class="byline"><span class="brand-badge" aria-hidden="true">M</span><span><b>Marco Antônio</b> · <a href="${IG}" target="_blank" rel="noopener">@omarcocaetano</a></span></p>
+      ${p.corpo}
+      <div class="cta">
+        <h3>${p.ctaTitulo || "Quer isso funcionando no seu negócio?"}</h3>
+        <p>${p.ctaTexto || "Eu ajudo negócios locais a juntar anúncio certo, perfil que passa confiança e atendimento que vende."} Me chama no WhatsApp: (63) 9111-4789.</p>
+        <div class="btn-row">
+          <a class="btn" href="${wppLink(p)}" target="_blank" rel="noopener">Falar com o Marco no WhatsApp</a>
+          <button class="btn ghost" type="button" id="copy">Copiar link deste material</button>
+        </div>
+      </div>
+    </article>`;
+  wireChecklist();
+  wireCalc();
+  wireCopy();
+  const btn = document.getElementById("copy");
+  btn.addEventListener("click", async () => {
+    btn.textContent = (await copyText(location.href)) ? "Link copiado" : "Copie o link na barra do navegador";
+  });
+  window.scrollTo(0, 0);
+}
+
+function wireChecklist() {
+  const box = document.getElementById("chk");
+  if (!box) return;
+  const inputs = [...box.querySelectorAll("input")];
+  const score = document.getElementById("score");
+  const update = () => {
+    const n = inputs.filter(i => i.checked).length;
+    score.innerHTML = `Sua equipe faz <b>${n} de ${inputs.length}</b>.` + (n === inputs.length ? " Atendimento redondo." : "");
+  };
+  inputs.forEach(i => i.addEventListener("change", update));
+  update();
+}
+
+/* Calculadora: quanto vender a mais para manter o mesmo lucro com desconto */
+function brl(v) { return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); }
+function extraNeeded(preco, custo, desc) {
+  const lucro = preco - custo;
+  const lucroDesc = preco * (1 - desc / 100) - custo;
+  if (lucro <= 0) return { erro: "O custo está maior ou igual ao preço. Confira os números." };
+  if (lucroDesc <= 0) return { erro: `Com ${desc}% de desconto você vende no prejuízo: cada venda dá ${brl(lucroDesc)}.` };
+  return { lucro, lucroDesc, extra: (lucro / lucroDesc - 1) * 100 };
+}
+function wireCalc() {
+  const out = document.getElementById("calc-out");
+  if (!out) return;
+  const ids = ["cp", "cc", "cd"].map(id => document.getElementById(id));
+  const update = () => {
+    const [p, c, d] = ids.map(i => parseFloat(String(i.value).replace(",", ".")) || 0);
+    const r = extraNeeded(p, c, d);
+    out.innerHTML = r.erro ? r.erro :
+      `Hoje você lucra <b>${brl(r.lucro)}</b> por venda. Com ${d}% de desconto, passa a lucrar <b>${brl(r.lucroDesc)}</b>. ` +
+      `Para ter o mesmo lucro, precisa vender <span class="mark"><b>${Math.round(r.extra)}% a mais</b></span>.`;
+  };
+  ids.forEach(i => i.addEventListener("input", update));
+  update();
+}
+
+function route() {
+  const slug = location.hash.replace("#", "");
+  const post = POSTS.find(p => p.slug === slug);
+  post ? renderPost(post) : renderHome();
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
