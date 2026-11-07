@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 jeitos de criar urgência sem mentir | Marco Antonio</title>
+<meta name="description" content="5 jeitos de criar urgência sem mentir | Marco Antonio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5 jeitos de criar urgência sem mentir | Marco Antonio">
+<meta property="og:description" content="5 jeitos de criar urgência sem mentir | Marco Antonio">
+<meta property="og:url" content="https://omarcocaetano.github.io/honesto/">
+<meta property="og:site_name" content="Marco Antonio">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 jeitos de criar urgência sem mentir | Marco Antonio">
+<meta name="twitter:description" content="5 jeitos de criar urgência sem mentir | Marco Antonio">
+<link rel="canonical" href="https://omarcocaetano.github.io/honesto/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: coluna única pensada para o celular, fundo quase preto, verde-limão como assinatura (identidade do Marco) */
+  --bg: #0A0C0A;
+  --card: #161A16;
+  --card-2: #1d221d;
+  --line: #2a312a;
+  --text: #F6F8F0;
+  --muted: #a7ae9f;
+  --lime: #D6FF1F;
+  --on-lime: #0A0C0A;
+  --display: "Anton", "Arial Narrow", Impact, sans-serif;
+  --body: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+strong { font-weight: 700; }
+
+.mark {
+  background: var(--lime); color: var(--on-lime);
+  padding: .05em .22em; border-radius: 3px; font-weight: 600;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+
+/* Topo */
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-badge {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--lime); color: var(--on-lime);
+  display: grid; place-items: center;
+  font-family: var(--display); font-size: 1.25rem;
+}
+.brand-name { font-weight: 700; font-size: .95rem; line-height: 1.2; }
+.brand-name small { display: block; font-weight: 400; font-size: .75rem; color: var(--muted); }
+.ig-link { font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--lime); }
+.ig-link:hover { text-decoration: underline; }
+
+/* Capa da home */
+.hero { padding: 48px 0 32px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.5rem, 10vw, 3.8rem); line-height: 1.02;
+  margin: 0 0 18px; text-transform: uppercase; text-wrap: balance; letter-spacing: .005em;
+}
+.hero h1 em { font-style: normal; color: var(--lime); }
+.hero p { margin: 0; max-width: 34em; color: var(--muted); font-size: 1.02rem; }
+
+/* Lista de posts */
+.list-label { font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; color: var(--muted); margin: 8px 0 14px; }
+.posts { display: grid; gap: 14px; padding-bottom: 56px; }
+.post-card {
+  display: grid; gap: 10px; text-decoration: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px;
+  transition: border-color .15s, transform .15s;
+}
+.post-card:hover { border-color: var(--lime); transform: translateY(-2px); }
+.post-card h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 1.65rem; line-height: 1.08; text-transform: uppercase; text-wrap: balance; }
+.post-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .78rem; color: var(--muted); }
+.chip { font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; padding: 4px 10px; border-radius: 99px; background: var(--lime); color: var(--on-lime); }
+.chip.soft { background: transparent; color: var(--text); border: 1px solid var(--line); }
+
+/* Artigo */
+.back { display: inline-block; margin: 24px 0 0; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--muted); }
+.back:hover { color: var(--lime); }
+article { padding: 22px 0 40px; }
+article h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.3rem, 9vw, 3.4rem); line-height: 1.03; text-transform: uppercase;
+  margin: 16px 0 14px; text-wrap: balance; letter-spacing: .005em;
+}
+.byline { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin: 0 0 26px; }
+.byline b { color: var(--text); font-weight: 600; }
+.byline a { color: var(--lime); text-decoration: none; }
+.lead { font-size: 1.12rem; line-height: 1.6; margin: 0 0 14px; }
+article h2 {
+  font-family: var(--display); font-weight: 400; text-transform: uppercase;
+  font-size: 1.7rem; line-height: 1.08; margin: 44px 0 12px; text-wrap: balance; letter-spacing: .01em;
+}
+article h2 .n { color: var(--lime); }
+article p { margin: 0 0 16px; }
+article ul, article ol { margin: 0 0 18px; padding-left: 1.2em; display: grid; gap: 8px; }
+article li::marker { color: var(--lime); }
+.src { font-size: .78rem; color: var(--muted); margin-top: -6px; }
+.quote {
+  margin: 36px 0; padding: 24px; border-radius: 16px;
+  background: var(--card); border: 1px solid var(--lime);
+  font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.8rem; line-height: 1.1; text-wrap: balance;
+}
+.quote span { color: var(--lime); }
+
+/* Checklist interativo */
+.checklist { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
+.checklist label {
+  display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; cursor: pointer;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+}
+.checklist input { appearance: none; -webkit-appearance: none; margin: 3px 0 0; width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: grid; place-items: center; cursor: pointer; background: transparent; }
+.checklist input:checked { background: var(--lime); border-color: var(--lime); }
+.checklist input:checked::after { content: ""; width: 6px; height: 11px; border: solid var(--on-lime); border-width: 0 3px 3px 0; transform: rotate(45deg) translate(-1px,-1px); }
+.checklist strong { display: block; }
+.checklist .hint { color: var(--muted); font-size: .9rem; }
+.score { font-size: .92rem; font-weight: 600; margin: 0 0 18px; font-variant-numeric: tabular-nums; }
+.score b { background: var(--lime); color: var(--on-lime); padding: 0 6px; border-radius: 4px; }
+
+.script-box { background: var(--card); border: 1px dashed var(--muted); border-radius: 12px; padding: 16px 18px; margin: 0 0 18px; }
+.script-box .lbl { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--lime); }
+.script-box p { margin: 4px 0 0; }
+
+/* Cartões de resposta com botão Copiar */
+.reply { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin: 0 0 14px; display: grid; gap: 12px; }
+.reply-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.reply-tag { font-weight: 700; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--lime); }
+.bubble { background: var(--card-2); border-radius: 4px 14px 14px 14px; padding: 14px 16px; font-size: 1rem; line-height: 1.6; }
+.slot { background: rgba(214,255,31,.16); color: var(--lime); border: 1px dashed var(--lime); border-radius: 5px; padding: 0 .3em; font-weight: 600; white-space: nowrap; }
+.when { margin: 0; font-size: .88rem; color: var(--muted); }
+.when b { color: var(--text); }
+.copy-btn {
+  font: 700 .8rem var(--body); padding: 8px 14px; border-radius: 99px; cursor: pointer;
+  border: 1px solid var(--lime); background: transparent; color: var(--lime); white-space: nowrap;
+}
+.copy-btn:hover, .copy-btn.ok { background: var(--lime); color: var(--on-lime); }
+.reply.filled { border-style: dashed; }
+
+/* Bloco destacado */
+.callout { background: var(--card); border-left: 4px solid var(--lime); border-radius: 0 16px 16px 0; padding: 20px 20px 4px; margin: 0 0 18px; }
+.callout h2 { margin-top: 0; }
+
+/* Calculadora */
+.calc { background: var(--card); border: 1px solid var(--lime); border-radius: 16px; padding: 18px; margin: 0 0 18px; display: grid; gap: 14px; }
+.calc-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.calc label { display: grid; gap: 6px; font-size: .8rem; font-weight: 600; color: var(--muted); }
+.calc input { font: 700 1.1rem var(--body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; font-variant-numeric: tabular-nums; }
+.calc-out { margin: 0; font-size: .98rem; font-variant-numeric: tabular-nums; }
+
+/* Calendário de semanas */
+.weeks { display: grid; gap: 14px; margin: 0 0 22px; }
+.week { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--lime); border-radius: 0 16px 16px 0; padding: 20px 20px 4px; }
+.week h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.45rem; line-height: 1.1; margin: 10px 0 8px; }
+.week-tag { display: inline-block; font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; padding: 4px 10px; border-radius: 99px; background: var(--lime); color: var(--on-lime); font-variant-numeric: tabular-nums; }
+.week .script-box { background: var(--bg); }
+
+/* CTA final */
+.cta { background: var(--card); border: 1px solid var(--line); border-radius: 18px; margin-top: 40px; padding: 24px; display: grid; gap: 14px; }
+.cta h3 { margin: 0; font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.7rem; line-height: 1.08; text-wrap: balance; }
+.cta p { margin: 0; color: var(--muted); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  font: 800 .95rem var(--body); padding: 14px 20px; border-radius: 99px; cursor: pointer; text-decoration: none; text-align: center;
+  border: 2px solid var(--lime); background: var(--lime); color: var(--on-lime);
+}
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
+.btn:hover { transform: translateY(-1px); }
+@media (max-width: 420px) { .btn-row .btn { flex: 1 1 100%; } }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: .82rem; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+footer a { color: var(--lime); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .post-card:hover, .btn:hover { transform: none; } }
+</style>
+<style>
+/* Página /honesto: cartões numerados, bloco de alerta vermelho e chamada em verde-limão */
+:root { --alert: #FF4D4D; }
+.ep { display: inline-block; font-weight: 700; font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; padding: 5px 11px; border-radius: 99px; border: 1px solid var(--lime); color: var(--lime); margin-top: 26px; }
+article p, article li { font-size: 1.06rem; }
+.jeitos { display: grid; gap: 16px; margin: 30px 0; }
+.jeito { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 20px 20px; display: grid; gap: 12px; }
+.jeito-n { font-family: var(--display); font-size: 2.6rem; line-height: .9; color: var(--lime); }
+.jeito h2 { margin: 0; font-size: 1.75rem; }
+.jeito p { margin: 0; }
+.pronta { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: grid; gap: 10px; }
+.pronta-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.pronta .bubble { background: var(--card-2); }
+.alerta { border: 2px solid var(--alert); border-radius: 18px; padding: 22px 20px; margin: 30px 0; background: rgba(255,77,77,.06); }
+.alerta h2 { margin: 0 0 14px; color: var(--alert); font-size: 1.75rem; }
+.alerta ul { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 10px; }
+.alerta li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; }
+.alerta li::before { content: "×"; color: var(--alert); font-weight: 800; font-size: 1.3rem; line-height: 1.2; }
+.alerta p { margin: 0; font-weight: 600; }
+.fechamento { font-size: 1.15rem; font-weight: 600; border-left: 4px solid var(--lime); padding-left: 16px; margin: 30px 0; }
+.chamada { background: var(--lime); color: var(--on-lime); border-radius: 20px; padding: 26px 22px; display: grid; gap: 18px; margin: 34px 0 10px; }
+.chamada p { margin: 0; font-family: var(--display); text-transform: uppercase; font-size: 1.75rem; line-height: 1.1; text-wrap: balance; }
+.chamada .btn-row { display: grid; gap: 10px; }
+.btn.dark { background: var(--on-lime); color: var(--lime); border-color: var(--on-lime); }
+.btn.dark-ghost { background: transparent; color: var(--on-lime); border-color: var(--on-lime); }
+.fonte { font-size: .78rem; color: var(--muted); line-height: 1.5; margin: 26px 0 0; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Página inicial do blog">
+      <span class="brand-badge" aria-hidden="true">M</span>
+      <span class="brand-name">Marco Antonio<small>Marketing e vendas para negócio local</small></span>
+    </a>
+    <a class="ig-link" href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">@omarcocaetano</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="/">← Todos os materiais</a>
+  <article>
+    <span class="ep">Material do episódio 1 · Por que você compra isso?</span>
+    <h1>5 jeitos de criar urgência sem mentir</h1>
+    <p class="byline"><span class="brand-badge" aria-hidden="true">M</span><span><b>Marco Antonio</b> · <a href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">@omarcocaetano</a></span></p>
+
+    <p class="lead">Você viu no vídeo: pesquisadores de Princeton e da Universidade de Chicago analisaram 11 mil sites de compra, e mais de 1 em cada 10 usava truques para empurrar a compra. Relógio que reinicia, estoque que nunca acaba, "fulano acabou de comprar" que nunca existiu.</p>
+    <p><span class="mark">Urgência funciona. Mas cliente enganado compra uma vez. Cliente que confia volta.</span></p>
+    <p>Aqui estão 5 jeitos de criar urgência no seu negócio sem precisar mentir para ninguém.</p>
+
+    <div class="jeitos">
+      <section class="jeito">
+        <span class="jeito-n">01</span>
+        <h2>Prazo de verdade</h2>
+        <p>Anuncie quando a oferta começa e quando ela acaba, com dia e hora. E cumpra. Se acabou na sexta às 23h59, no sábado o preço volta. A primeira vez que você prorroga uma promoção "que ia acabar", o cliente aprende que pode esperar.</p>
+        <div class="pronta">
+          <div class="pronta-head"><span class="reply-tag">Frase pronta</span><button class="copy-btn" type="button" data-copy="f1">Copiar</button></div>
+          <div class="bubble" id="f1">A condição de Black Friday vai até sexta, às 23h59. Depois disso, volta o preço normal.</div>
+        </div>
+      </section>
+
+      <section class="jeito">
+        <span class="jeito-n">02</span>
+        <h2>Estoque contado de verdade</h2>
+        <p>Se restam 3 peças, mostre as 3 peças. Uma foto ou um vídeo rápido nos Stories vale mais que qualquer contador. E quando acabar, avise que acabou: isso prova que o próximo "restam poucas" também é verdade.</p>
+        <div class="pronta">
+          <div class="pronta-head"><span class="reply-tag">Frase pronta</span><button class="copy-btn" type="button" data-copy="f2">Copiar</button></div>
+          <div class="bubble" id="f2">Separei aqui as últimas 3 do tamanho M. Quando essas saírem, só na próxima coleção.</div>
+        </div>
+      </section>
+
+      <section class="jeito">
+        <span class="jeito-n">03</span>
+        <h2>Lista VIP: quem chega antes, leva antes</h2>
+        <p>Em vez de criar medo de perder, crie vantagem por chegar primeiro. Monte uma lista no WhatsApp e libere as ofertas para ela um dia antes de todo mundo. A urgência vem do benefício, e não da pressão.</p>
+        <div class="pronta">
+          <div class="pronta-head"><span class="reply-tag">Frase pronta</span><button class="copy-btn" type="button" data-copy="f3">Copiar</button></div>
+          <div class="bubble" id="f3">Quer entrar na lista VIP? Quem está nela recebe as ofertas um dia antes e escolhe primeiro.</div>
+        </div>
+      </section>
+
+      <section class="jeito">
+        <span class="jeito-n">04</span>
+        <h2>Bônus com limite claro</h2>
+        <p>Ofereça algo a mais para um número definido de pessoas: os 20 primeiros ganham um brinde, a primeira semana tem entrega grátis. Diga o número antes e mostre a contagem real nos Stories ("faltam 6 brindes").</p>
+        <div class="pronta">
+          <div class="pronta-head"><span class="reply-tag">Frase pronta</span><button class="copy-btn" type="button" data-copy="f4">Copiar</button></div>
+          <div class="bubble" id="f4">Os 20 primeiros pedidos de hoje ganham <span class="slot">[brinde]</span>. Já foram 14, faltam 6.</div>
+        </div>
+      </section>
+
+      <section class="jeito">
+        <span class="jeito-n">05</span>
+        <h2>Um motivo verdadeiro para a oferta</h2>
+        <p>Toda promoção precisa de um porquê: fim de coleção, aniversário da loja, Black Friday, chegada de produto novo. Quando o cliente entende por que existe o desconto, ele confia que o desconto é real e que ele termina.</p>
+        <div class="pronta">
+          <div class="pronta-head"><span class="reply-tag">Frase pronta</span><button class="copy-btn" type="button" data-copy="f5">Copiar</button></div>
+          <div class="bubble" id="f5">Estamos fazendo 5 anos e, só nesta semana, todo cliente ganha <span class="slot">[condição]</span>.</div>
+        </div>
+      </section>
+    </div>
+
+    <section class="alerta" aria-labelledby="nunca">
+      <h2 id="nunca">O que nunca fazer</h2>
+      <ul>
+        <li>Relógio que volta a contar quando a pessoa atualiza a página.</li>
+        <li>"Últimas unidades" que nunca terminam.</li>
+        <li>Notificação de compra ou depoimento inventado.</li>
+        <li>"Última chance" que volta toda semana.</li>
+        <li>Botão de recusar escrito para constranger ("não, eu odeio economizar").</li>
+      </ul>
+      <p>Isso pode até vender hoje. Mas mata a confiança, e é ela que faz o cliente voltar.</p>
+    </section>
+
+    <p class="fechamento">Urgência honesta é simples: diga a verdade sobre o prazo, o estoque e o motivo, e cumpra o que você disse.</p>
+
+    <section class="chamada">
+      <p>Quer ajuda para montar a campanha de Black Friday do seu negócio, do anúncio ao atendimento no WhatsApp?</p>
+      <div class="btn-row">
+        <a class="btn dark" href="https://wa.me/556391114789" target="_blank" rel="noopener">Falar com o Marco no WhatsApp</a>
+        <a class="btn dark-ghost" href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">Seguir @omarcocaetano</a>
+      </div>
+    </section>
+
+    <p class="fonte">Fonte do estudo: Mathur et al., "Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites" (Princeton University e University of Chicago, 2019).</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Marco Antonio · Araguaína, TO · <a href="https://www.instagram.com/omarcocaetano/" target="_blank" rel="noopener">@omarcocaetano</a></span>
+    <span>Viu o vídeo? O material completo fica aqui.</span>
+  </div>
+</footer>
+
+<script>
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e2) { return false; }
+  }
+}
+document.querySelectorAll("[data-copy]").forEach(btn => {
+  btn.addEventListener("click", async () => {
+    const ok = await copyText(document.getElementById(btn.dataset.copy).innerText.trim());
+    btn.textContent = ok ? "Copiado" : "Selecione e copie";
+    btn.classList.toggle("ok", ok);
+    setTimeout(() => { btn.textContent = "Copiar"; btn.classList.remove("ok"); }, 2200);
+  });
+});
+</script>
+</body>
+</html>

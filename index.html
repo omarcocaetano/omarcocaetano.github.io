@@ -212,6 +212,14 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "honesto",
+    href: "/honesto/",
+    titulo: "5 jeitos de criar urgência sem mentir",
+    resumo: "Prazo, estoque, lista VIP, bônus e motivo de verdade: como criar urgência no seu negócio sem enganar o cliente. Com frases prontas para copiar.",
+    data: "2026-11-07",
+    pilar: "Vendas e atendimento"
+  },
+  {
     slug: "cliente-pediu-desconto",
     titulo: "Cliente pediu desconto? 3 respostas para vender sem baixar o preço",
     apoio: "Copie, troque o que está destacado pelo dado do seu negócio e use hoje no seu WhatsApp.",
@@ -441,7 +449,7 @@ function renderHome() {
     <p class="list-label">Materiais publicados</p>
     <div class="posts">
       ${POSTS.map(p => `
-        <a class="post-card" href="#${p.slug}">
+        <a class="post-card" href="${p.href || "#" + p.slug}">
           <span class="meta"><span class="chip">${p.pilar}</span><span>${fmtData(p.data)}</span></span>
           <h2>${p.titulo}</h2>
           <p>${p.resumo}</p>
@@ -518,7 +526,7 @@ function wireCalc() {
 
 function route() {
   const slug = location.hash.replace("#", "");
-  const post = POSTS.find(p => p.slug === slug);
+  const post = POSTS.find(p => p.slug === slug && !p.href);
   post ? renderPost(post) : renderHome();
 }
 window.addEventListener("hashchange", route);
