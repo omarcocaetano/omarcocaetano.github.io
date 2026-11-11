@@ -212,6 +212,74 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "frases",
+    titulo: "Nunca mande essas 5 frases pro seu cliente (e o que dizer no lugar)",
+    apoio: "As 5 trocas do vídeo, prontas para copiar no seu WhatsApp, e uma colinha para colar do lado de quem atende.",
+    resumo: "Qual o seu orçamento, vou ver e te aviso, esse é o mais barato, é só isso e qualquer coisa me chama: as 5 frases que esfriam a venda e a troca de cada uma.",
+    data: "2026-11-11",
+    pilar: "Vendas e atendimento",
+    palavra: "FRASES",
+    ctaTitulo: "Quer treinar quem atende o WhatsApp do seu negócio?",
+    ctaTexto: "Eu treino a equipe de atendimento para conduzir a conversa até a venda, do primeiro oi ao pós-venda.",
+    wppMsg: "Oi Marco, vim pelo vídeo das 5 frases e quero ajuda com o atendimento do meu WhatsApp.",
+    corpo: `
+      <p class="lead">Quem te chamou no WhatsApp já queria comprar. <span class="mark">Venda quase nunca se perde no preço. Se perde na frase.</span></p>
+      <p>Abaixo estão as 5 frases que esfriam a conversa e a troca de cada uma. Copie, troque o que está destacado pelo dado do seu negócio e use hoje.</p>
+
+      <h2><span class="n">1.</span> Em vez de "Qual o seu orçamento?"</h2>
+      <p>O cliente sente que vai levar facada e fica na defensiva. Pergunte pela necessidade, não pelo bolso: você descobre a urgência sem assustar e ainda ganha argumento para oferecer a opção certa.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Diga</span><button class="copy-btn" type="button" data-copy="fr1">Copiar</button></div>
+        <div class="bubble" id="fr1">Pra eu te indicar a melhor opção: pra quando você precisa?</div>
+      </div>
+
+      <h2><span class="n">2.</span> Em vez de "Vou ver e te aviso"</h2>
+      <p>Sem prazo, a conversa morre ali e o cliente vai perguntar no concorrente. Dar um horário passa confiança e deixa ele esperando por você.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Diga</span><button class="copy-btn" type="button" data-copy="fr2">Copiar</button></div>
+        <div class="bubble" id="fr2">Vou confirmar aqui e te respondo até as <span class="slot">[horário]</span>, combinado?</div>
+      </div>
+
+      <h2><span class="n">3.</span> Em vez de "Esse é o mais barato"</h2>
+      <p>Você acabou de dizer que ele é a pior opção. Fale do que faz o cliente se sentir seguro: o que os outros clientes escolhem.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Diga</span><button class="copy-btn" type="button" data-copy="fr3">Copiar</button></div>
+        <div class="bubble" id="fr3">Esse é o que mais sai aqui. O pessoal gosta porque <span class="slot">[motivo]</span>.</div>
+      </div>
+
+      <h2><span class="n">4.</span> Em vez de "É só isso?"</h2>
+      <p>Parece que você quer se livrar do cliente. Troque por uma frase que já encaminha o fechamento.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Diga</span><button class="copy-btn" type="button" data-copy="fr4">Copiar</button></div>
+        <div class="bubble" id="fr4">Quer que eu já separe pra você?</div>
+      </div>
+
+      <h2><span class="n">5.</span> Em vez de "Qualquer coisa, me chama"</h2>
+      <p>Ele não vai chamar. Quem marca o próximo contato é você, com dia e hora.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Diga</span><button class="copy-btn" type="button" data-copy="fr5">Copiar</button></div>
+        <div class="bubble" id="fr5">Posso te chamar amanhã às <span class="slot">[horário]</span> pra saber o que achou?</div>
+      </div>
+
+      <div class="callout">
+        <h2>A colinha para colar do lado de quem atende</h2>
+        <ul>
+          <li><b>Orçamento?</b> Pergunte: "pra quando você precisa?"</li>
+          <li><b>Vou ver?</b> Dê horário: "te respondo até as 17h".</li>
+          <li><b>Mais barato?</b> Diga: "esse é o que mais sai".</li>
+          <li><b>É só isso?</b> Diga: "quer que eu já separe pra você?"</li>
+          <li><b>Me chama?</b> Marque: "posso te chamar amanhã às 10h?"</li>
+        </ul>
+        <div id="colinha" hidden>Orçamento? Pergunte: pra quando você precisa?
+Vou ver? Dê horário: te respondo até as 17h.
+Mais barato? Diga: esse é o que mais sai.
+É só isso? Diga: quer que eu já separe pra você?
+Me chama? Marque: posso te chamar amanhã às 10h?</div>
+        <p><button class="copy-btn" type="button" data-copy="colinha">Copiar a colinha</button></p>
+      </div>
+    `
+  },
+  {
     slug: "honesto",
     href: "/honesto/",
     titulo: "5 jeitos de criar urgência sem mentir",
