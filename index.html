@@ -212,6 +212,89 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "volta",
+    titulo: "O truque do cérebro que faz o cliente voltar: as 8 mensagens para chamar quem sumiu",
+    apoio: "O efeito Zeigarnik explicado em português de gente, os três jeitos de usar na sua loja e as 8 mensagens prontas para copiar no WhatsApp.",
+    resumo: "O cérebro não larga o que ficou pela metade. Cartão fidelidade que já começa carimbado, orçamento com o próximo passo marcado e 8 mensagens para trazer de volta o cliente que sumiu.",
+    data: "2026-11-16",
+    pilar: "Vendas e atendimento",
+    palavra: "VOLTA",
+    ctaTitulo: "Quer que o cliente volte sem você depender só de anúncio?",
+    ctaTexto: "Eu monto com você o pós-venda e o follow-up do seu negócio e treino quem atende o WhatsApp para manter o cliente por perto.",
+    wppMsg: "Oi Marco, vim pelo carrossel do VOLTA e quero ajuda para o cliente voltar na minha loja.",
+    corpo: `
+      <p class="lead">O anúncio traz o cliente uma vez. <span class="mark">O que faz ele voltar é o que ficou em aberto.</span></p>
+      <p>Nos anos 1920, a psicóloga Bluma Zeigarnik percebeu que garçons lembravam dos pedidos ainda não pagos e esqueciam os que já tinham fechado. O nome disso ficou <b>efeito Zeigarnik</b>: o que fica pela metade incomoda, e o cérebro puxa de volta até terminar. É o mesmo motivo de você assistir mais um episódio depois do gancho da série.</p>
+      <p>No seu negócio, isso vira três hábitos simples.</p>
+
+      <h2><span class="n">1.</span> Cartão fidelidade que já começa carimbado</h2>
+      <p>Num estudo com um lava-jato, um cartão de 10 carimbos com 2 já marcados fez <b>34%</b> dos clientes completarem. O cartão de 8 carimbos em branco ficou em <b>19%</b>. Faltava o mesmo número de lavagens nos dois. Mudou só a sensação de que o caminho já tinha começado.</p>
+      <p>Na prática: entregue o cartão com os 2 primeiros carimbos de boas-vindas na primeira compra.</p>
+
+      <h2><span class="n">2.</span> Orçamento com o próximo passo marcado</h2>
+      <div class="script-box"><span class="lbl">Em vez de</span><p>"Qualquer coisa, me chama."</p></div>
+      <div class="script-box"><span class="lbl">Diga</span><p>"Separei a peça até quinta. Te chamo na quarta para confirmar o tamanho."</p></div>
+      <p>No primeiro, a conversa morre ali. No segundo, ela fica aberta, e quem tem algo aberto volta. Para orçamento que já esfriou, use a <a href="#orcamento">cadência das 8 mensagens de orçamento</a>.</p>
+
+      <h2><span class="n">3.</span> Follow-up que não para na primeira mensagem</h2>
+      <p>O cliente que sumiu não disse não. Ele deixou a conversa pela metade. Abaixo estão as 8 mensagens para quem <b>já comprou</b> com você e não voltou. Cada uma leva um motivo novo e deixa uma ponta aberta. Troque o que está destacado pelo dado da sua loja.</p>
+
+      <h2>Mensagem 1: Logo depois da entrega: a foto</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 0</span><button class="copy-btn" type="button" data-copy="vt1">Copiar</button></div>
+        <div class="bubble" id="vt1">Oi, <span class="slot">[nome]</span>! Chegou tudo certo? Me manda uma foto usando, que eu quero ver como ficou.</div>
+      </div>
+      <h2>Mensagem 2: Uma semana depois: a dica</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 7</span><button class="copy-btn" type="button" data-copy="vt2">Copiar</button></div>
+        <div class="bubble" id="vt2">Separei uma dica para o <span class="slot">[produto]</span> que você levou: <span class="slot">[como cuidar ou combinar]</span>. Tenho mais duas, quer que eu te mande?</div>
+      </div>
+      <h2>Mensagem 3: Duas semanas: o cartão</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 15</span><button class="copy-btn" type="button" data-copy="vt3">Copiar</button></div>
+        <div class="bubble" id="vt3">Lembrete rápido: você já tem <span class="slot">[2]</span> carimbos no seu cartão aqui da loja. Faltam <span class="slot">[8]</span> para <span class="slot">[o prêmio]</span>.</div>
+      </div>
+      <h2>Mensagem 4: Três semanas: a novidade</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 21</span><button class="copy-btn" type="button" data-copy="vt4">Copiar</button></div>
+        <div class="bubble" id="vt4">Chegou <span class="slot">[produto novo]</span> e combina com o <span class="slot">[produto]</span> que você levou. Quer que eu separe um para você ver?</div>
+      </div>
+      <h2>Mensagem 5: Um mês: a pergunta</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 30</span><button class="copy-btn" type="button" data-copy="vt5">Copiar</button></div>
+        <div class="bubble" id="vt5">Posso te fazer uma pergunta rápida? O que faria você comprar aqui mais vezes? Quero melhorar a loja e a sua opinião conta.</div>
+      </div>
+      <h2>Mensagem 6: Seis semanas: a condição</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 45</span><button class="copy-btn" type="button" data-copy="vt6">Copiar</button></div>
+        <div class="bubble" id="vt6">Para quem já comprou aqui, liberei <span class="slot">[parcelamento em X vezes ou brinde]</span> até <span class="slot">[data]</span>. Lembrei de você.</div>
+      </div>
+      <h2>Mensagem 7: Dois meses: a reposição</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 60</span><button class="copy-btn" type="button" data-copy="vt7">Copiar</button></div>
+        <div class="bubble" id="vt7">Pelo tempo, o seu <span class="slot">[produto]</span> já deve estar <span class="slot">[acabando ou precisando de troca]</span>. Quer que eu deixe um separado?</div>
+      </div>
+      <h2>Mensagem 8: Três meses: a porta aberta</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Dia 90</span><button class="copy-btn" type="button" data-copy="vt8">Copiar</button></div>
+        <div class="bubble" id="vt8">Faz um tempo que você não aparece e fiquei pensando se ficou alguma coisa pendente da sua última compra. Se tiver, me fala que eu resolvo. Seus carimbos continuam guardados aqui.</div>
+      </div>
+
+      <div class="callout">
+        <h2>Como usar sem forçar a barra</h2>
+        <ul>
+          <li><b>O progresso precisa ser real.</b> Carimbo de boas-vindas e prazo verdadeiro funcionam. Prazo inventado vira pressão, e pressão afasta.</li>
+          <li><b>Respondeu?</b> Parou a sequência e voltou a conversar.</li>
+          <li><b>Pediu para não receber?</b> Agradeça e tire da lista na hora.</li>
+          <li><b>Desconto só no fim.</b> Antes, ofereça outra condição de pagamento, como o parcelamento.</li>
+          <li><b>Anote o dia de cada mensagem</b> nas etiquetas do WhatsApp Business ou numa planilha.</li>
+        </ul>
+      </div>
+
+      <div class="quote">O cliente não some porque esqueceu de você. <span>Some porque nada ficou em aberto.</span></div>
+    `
+  },
+  {
     slug: "stories",
     titulo: "Uma semana de Stories pronta para a sua loja",
     apoio: "Sete dias de sequência, do bastidor ao produto com preço, com o texto de cada Story pronto para copiar.",
