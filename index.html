@@ -212,6 +212,131 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "stories",
+    titulo: "Uma semana de Stories pronta para a sua loja",
+    apoio: "Sete dias de sequência, do bastidor ao produto com preço, com o texto de cada Story pronto para copiar.",
+    resumo: "Cliente usando o produto e bastidores são ótimos. Produto novo e enquete são bons. Meme e arte pronta de promoção, evite. Aqui está a semana montada só com o que funciona.",
+    data: "2026-11-16",
+    pilar: "Conteúdo para vender",
+    palavra: "STORIES",
+    ctaTitulo: "Quer os Stories da sua loja vendendo todo dia?",
+    ctaTexto: "Eu monto com você o roteiro de Stories da sua loja e ensino quem posta a manter a sequência sem depender de inspiração.",
+    wppMsg: "Oi Marco, vim pelo vídeo dos Stories e quero ajuda com os Stories da minha loja.",
+    corpo: `
+      <p class="lead">Story que vende mostra <span class="mark">a loja viva, o seu rosto e como comprar.</span></p>
+      <p>No vídeo, a régua foi esta: <b>ótimo</b> é cliente usando o seu produto e bastidores. <b>Bom</b> é produto novo com preço e enquete. <b>Evite</b> meme, frase motivacional e arte pronta de promoção. A semana abaixo usa só o ótimo e o bom.</p>
+      <p>Poste de 3 a 5 Stories por dia, apareça pelo menos uma vez falando e termine toda sequência dizendo como comprar. Troque o que está destacado pelo dado da sua loja.</p>
+
+      <h2><span class="n">1.</span> Segunda: a loja abrindo</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · vídeo abrindo a porta</span><button class="copy-btn" type="button" data-copy="st1">Copiar</button></div>
+        <div class="bubble" id="st1">Bom dia! Loja aberta até <span class="slot">[horário]</span>.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · você arrumando a vitrine</span><button class="copy-btn" type="button" data-copy="st2">Copiar</button></div>
+        <div class="bubble" id="st2">Arrumando a vitrine pra semana. Adivinha o que vai ficar em destaque?</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · enquete</span><button class="copy-btn" type="button" data-copy="st3">Copiar</button></div>
+        <div class="bubble" id="st3">Quer que eu mostre amanhã o que chegou? <span class="slot">[Quero!]</span> <span class="slot">[Mostra hoje]</span></div>
+      </div>
+
+      <h2><span class="n">2.</span> Terça: produto novo com o seu rosto</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · você segurando o produto</span><button class="copy-btn" type="button" data-copy="st4">Copiar</button></div>
+        <div class="bubble" id="st4">Chegou hoje e eu já separei pra te mostrar: <span class="slot">[nome do produto]</span>.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · detalhe de perto</span><button class="copy-btn" type="button" data-copy="st5">Copiar</button></div>
+        <div class="bubble" id="st5"><span class="slot">[detalhe que ninguém vê na foto]</span>. Por <span class="slot">[R$ preço]</span> ou <span class="slot">[X]</span>x de <span class="slot">[R$ parcela]</span>.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · como comprar</span><button class="copy-btn" type="button" data-copy="st6">Copiar</button></div>
+        <div class="bubble" id="st6">Quer reservar? Toca no link e me chama no WhatsApp. Tem <span class="slot">[quantidade]</span> unidades.</div>
+      </div>
+
+      <h2><span class="n">3.</span> Quarta: cliente usando o seu produto</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · repost da marcação do cliente</span><button class="copy-btn" type="button" data-copy="st7">Copiar</button></div>
+        <div class="bubble" id="st7">Olha quem chegou usando! Obrigado, <span class="slot">[@cliente]</span>.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · você falando</span><button class="copy-btn" type="button" data-copy="st8">Copiar</button></div>
+        <div class="bubble" id="st8">Comprou com a gente? Me marca quando usar que eu reposto aqui.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · o produto que ele levou</span><button class="copy-btn" type="button" data-copy="st9">Copiar</button></div>
+        <div class="bubble" id="st9">Esse é o <span class="slot">[produto]</span> que ele levou. Ainda tenho no <span class="slot">[tamanho/cor]</span>. Me chama no WhatsApp.</div>
+      </div>
+
+      <h2><span class="n">4.</span> Quinta: o cliente escolhe</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · enquete com duas fotos</span><button class="copy-btn" type="button" data-copy="st10">Copiar</button></div>
+        <div class="bubble" id="st10">Qual você levaria? <span class="slot">[A]</span> ou <span class="slot">[B]</span>?</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · caixinha de pergunta</span><button class="copy-btn" type="button" data-copy="st11">Copiar</button></div>
+        <div class="bubble" id="st11">O que você quer ver chegando aqui na loja?</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · resultado da enquete</span><button class="copy-btn" type="button" data-copy="st12">Copiar</button></div>
+        <div class="bubble" id="st12">Deu <span class="slot">[A]</span>! Quem votou nele, tem no <span class="slot">[tamanho/cor]</span>. Me chama que eu separo.</div>
+      </div>
+
+      <h2><span class="n">5.</span> Sexta: o bastidor do pedido</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · você embalando</span><button class="copy-btn" type="button" data-copy="st13">Copiar</button></div>
+        <div class="bubble" id="st13">Embalando mais um pedido. Esse vai pra <span class="slot">[bairro ou cidade]</span>.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · a entrega saindo</span><button class="copy-btn" type="button" data-copy="st14">Copiar</button></div>
+        <div class="bubble" id="st14">Entregamos em <span class="slot">[região]</span>. Pedido feito até <span class="slot">[horário]</span> chega no mesmo dia.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · como comprar</span><button class="copy-btn" type="button" data-copy="st15">Copiar</button></div>
+        <div class="bubble" id="st15">Quer receber em casa no fim de semana? Me chama no WhatsApp até <span class="slot">[horário]</span>.</div>
+      </div>
+
+      <h2><span class="n">6.</span> Sábado: os mais pedidos da semana</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · você falando</span><button class="copy-btn" type="button" data-copy="st16">Copiar</button></div>
+        <div class="bubble" id="st16">Os 3 mais pedidos da semana. O terceiro quase acabou.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Stories 2 a 4 · um produto por Story</span><button class="copy-btn" type="button" data-copy="st17">Copiar</button></div>
+        <div class="bubble" id="st17"><span class="slot">[posição]</span>º mais pedido: <span class="slot">[produto]</span>. <span class="slot">[R$ preço]</span> ou <span class="slot">[X]</span>x no cartão.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 5 · como comprar</span><button class="copy-btn" type="button" data-copy="st18">Copiar</button></div>
+        <div class="bubble" id="st18">Hoje a loja fica aberta até <span class="slot">[horário]</span>. Ou me chama no WhatsApp que eu separo.</div>
+      </div>
+
+      <h2><span class="n">7.</span> Domingo: quem já comprou</h2>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 1 · print de mensagem de cliente (com autorização)</span><button class="copy-btn" type="button" data-copy="st19">Copiar</button></div>
+        <div class="bubble" id="st19">Essa mensagem fez o meu domingo. Obrigado, <span class="slot">[nome]</span>!</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 2 · você falando</span><button class="copy-btn" type="button" data-copy="st20">Copiar</button></div>
+        <div class="bubble" id="st20">Semana que vem chega <span class="slot">[novidade]</span>. Quer que eu te avise primeiro?</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Story 3 · enquete</span><button class="copy-btn" type="button" data-copy="st21">Copiar</button></div>
+        <div class="bubble" id="st21">Me avisa quando chegar: <span class="slot">[Quero!]</span> <span class="slot">[Agora não]</span></div>
+      </div>
+
+      <div class="callout">
+        <h2>Como usar a semana</h2>
+        <ul>
+          <li><b>Respondeu a enquete ou a caixinha?</b> Chame no direct. Quem vota já está interessado.</li>
+          <li><b>Preço sempre visível.</b> Preço só no direct faz o cliente desistir antes de perguntar.</li>
+          <li><b>Fora da semana:</b> meme, frase motivacional e arte pronta de promoção. Não têm nada a ver com a sua loja e ninguém compra por causa disso.</li>
+          <li><b>Repita na outra semana</b> trocando os produtos. A sequência é a mesma, só muda o que aparece.</li>
+        </ul>
+      </div>
+    `
+  },
+  {
     slug: "orcamento",
     titulo: "O cliente sumiu depois do orçamento? As 8 mensagens para chamar de volta",
     apoio: "A cadência completa do vídeo: oito abordagens, cada uma com um motivo diferente, prontas para copiar no seu WhatsApp.",
