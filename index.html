@@ -212,6 +212,59 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "cliente",
+    titulo: "Quanto custa cada cliente seu",
+    apoio: "A calculadora do vídeo: coloque o que você investe, quantas conversas chegam e quantas vendas fecha, e veja onde o dinheiro está escapando.",
+    resumo: "Você e o concorrente investem o mesmo e recebem as mesmas mensagens. Ele fecha três, você fecha uma. O cliente dele sai por R$ 11 e o seu por R$ 33. Descubra o seu número.",
+    data: "2026-11-17",
+    pilar: "Tráfego pago",
+    palavra: "CLIENTE",
+    ctaTitulo: "Quer baixar o custo de cada cliente?",
+    ctaTexto: "Eu olho o seu anúncio, o seu perfil e o seu atendimento e te mostro qual dos três está deixando o cliente caro.",
+    wppMsg: "Oi Marco, vim pelo vídeo do concorrente que paga menos e usei a calculadora. Quero entender o meu custo por cliente.",
+    corpo: `
+      <p class="lead">Anúncio caro nem sempre é problema de anúncio. Muitas vezes <span class="mark">o que está caro é o atendimento.</span></p>
+      <p>No vídeo, a conta foi esta: você e o seu concorrente investem R$ 1.000 por mês, uns R$ 33 por dia, e cada um recebe 10 mensagens por dia. Você fecha 1 e ele fecha 3. O seu cliente sai por R$ 33 e o dele por R$ 11. Mesmo anúncio, mesmo dinheiro, e ele paga três vezes menos.</p>
+
+      <h2><span class="n">1.</span> Faça a sua conta</h2>
+      <p>Use os números de um mês. Já deixei preenchido com o exemplo do vídeo, é só trocar pelos seus.</p>
+      <div class="calc" id="kc">
+        <div class="calc-fields">
+          <label for="kc-inv">Investimento em anúncio no mês (R$)<input id="kc-inv" type="number" inputmode="decimal" min="0" step="1" value="1000"></label>
+          <label for="kc-msg">Conversas que chegaram no mês<input id="kc-msg" type="number" inputmode="numeric" min="0" step="1" value="300"></label>
+          <label for="kc-vend">Vendas que você fechou no mês<input id="kc-vend" type="number" inputmode="numeric" min="0" step="1" value="30"></label>
+          <label for="kc-tic">Valor médio de cada venda (R$)<input id="kc-tic" type="number" inputmode="decimal" min="0" step="1" value="150"></label>
+        </div>
+        <p class="calc-out" id="kc-out" aria-live="polite"></p>
+      </div>
+
+      <h2><span class="n">2.</span> Onde achar cada número</h2>
+      <ul>
+        <li><b>Investimento:</b> no Gerenciador de Anúncios, a coluna "Valor usado" do mês. Se você impulsiona pelo Instagram, some o que gastou nos impulsionamentos.</li>
+        <li><b>Conversas:</b> no Gerenciador, a coluna "Conversas por mensagem iniciadas". Se não tiver, conte os contatos novos do mês no WhatsApp.</li>
+        <li><b>Vendas:</b> quantas dessas conversas viraram compra. Se você não anota, comece hoje com as etiquetas do WhatsApp Business: "novo", "orçamento enviado" e "fechou".</li>
+        <li><b>Valor médio:</b> o total vendido para esses clientes dividido pelo número de vendas.</li>
+      </ul>
+
+      <h2><span class="n">3.</span> Como ler o resultado</h2>
+      <div class="callout">
+        <ul>
+          <li><b>Cada conversa está cara?</b> O problema está antes do WhatsApp: o anúncio não prende ou ninguém te conhece. Melhore o começo do anúncio e poste conteúdo com o seu rosto.</li>
+          <li><b>A conversa está barata, mas o cliente está caro?</b> O problema está no atendimento. Chega gente, mas pouca gente compra.</li>
+          <li><b>Fecha menos de 1 a cada 10 conversas?</b> Antes de aumentar o investimento, arrume o atendimento. Mais dinheiro no anúncio só traz mais conversa para ser perdida.</li>
+        </ul>
+      </div>
+
+      <h2><span class="n">4.</span> Os 3 motivos do vídeo</h2>
+      <ul>
+        <li><b>O anúncio dele prende.</b> A Meta não mostra só o anúncio de quem paga mais: ela olha se as pessoas param para ver. O anúncio que prende sai mais barato.</li>
+        <li><b>Ele cria conteúdo.</b> Quem já conhece a pessoa que está anunciando confia e chama mais rápido. Cada contato sai mais barato.</li>
+        <li><b>Ele vende mais nas mesmas conversas.</b> Esse não tem nada a ver com o anúncio. É resposta rápida, frase certa e voltar a chamar quem sumiu.</li>
+      </ul>
+      <p>Se o seu problema está no terceiro, comece por aqui: <a href="#frases">as 5 frases que esfriam a venda no WhatsApp</a> e <a href="#orcamento">as mensagens prontas para quem sumiu depois do orçamento</a>.</p>
+    `
+  },
+  {
     slug: "volta",
     titulo: "O truque do cérebro que faz o cliente voltar: as 8 mensagens para chamar quem sumiu",
     apoio: "O efeito Zeigarnik explicado em português de gente, os três jeitos de usar na sua loja e as 8 mensagens prontas para copiar no WhatsApp.",
@@ -822,6 +875,7 @@ function renderPost(p) {
     </article>`;
   wireChecklist();
   wireCalc();
+  wireCusto();
   wireCopy();
   const btn = document.getElementById("copy");
   btn.addEventListener("click", async () => {
@@ -862,6 +916,29 @@ function wireCalc() {
     out.innerHTML = r.erro ? r.erro :
       `Hoje você lucra <b>${brl(r.lucro)}</b> por venda. Com ${d}% de desconto, passa a lucrar <b>${brl(r.lucroDesc)}</b>. ` +
       `Para ter o mesmo lucro, precisa vender <span class="mark"><b>${Math.round(r.extra)}% a mais</b></span>.`;
+  };
+  ids.forEach(i => i.addEventListener("input", update));
+  update();
+}
+
+/* Calculadora: quanto custa cada cliente (post #cliente) */
+function wireCusto() {
+  const out = document.getElementById("kc-out");
+  if (!out) return;
+  const ids = ["kc-inv", "kc-msg", "kc-vend", "kc-tic"].map(id => document.getElementById(id));
+  const update = () => {
+    const [inv, msg, vend, tic] = ids.map(i => parseFloat(String(i.value).replace(",", ".")) || 0);
+    if (inv <= 0 || msg <= 0) { out.innerHTML = "Preencha o investimento e as conversas do mês."; return; }
+    const porMsg = inv / msg;
+    if (vend <= 0) { out.innerHTML = `Cada conversa te custa <b>${brl(porMsg)}</b>, mas nenhuma virou venda. O problema está no atendimento.`; return; }
+    if (vend > msg) { out.innerHTML = "As vendas estão maiores que as conversas. Confira os números."; return; }
+    const cliente = inv / vend, taxa = vend / msg * 100;
+    const melhor = Math.min(msg, Math.ceil(vend * 1.5));
+    let txt = `Cada conversa te custa <b>${brl(porMsg)}</b>. Você fecha <b>${taxa.toLocaleString("pt-BR", { maximumFractionDigits: 1 })}%</b> delas, ` +
+      `então <span class="mark"><b>cada cliente sai por ${brl(cliente)}</b></span>.`;
+    if (tic > 0) txt += ` Cada R$ 1 no anúncio volta <b>${brl(vend * tic / inv)}</b> em vendas.`;
+    if (melhor > vend) txt += ` Se você fechar ${melhor} em vez de ${vend}, com o mesmo investimento, o cliente cai para <b>${brl(inv / melhor)}</b>.`;
+    out.innerHTML = txt;
   };
   ids.forEach(i => i.addEventListener("input", update));
   update();
