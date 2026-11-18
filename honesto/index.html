@@ -59,11 +59,12 @@ header.top { border-bottom: 1px solid var(--line); }
 header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand-badge {
-  width: 38px; height: 38px; border-radius: 10px;
+  width: 38px; height: 38px; border-radius: 50%; overflow: hidden; border: 2px solid var(--lime); flex: none;
   background: var(--lime); color: var(--on-lime);
   display: grid; place-items: center;
   font-family: var(--display); font-size: 1.25rem;
 }
+.brand-badge img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .brand-name { font-weight: 700; font-size: .95rem; line-height: 1.2; }
 .brand-name small { display: block; font-weight: 400; font-size: .75rem; color: var(--muted); }
 .ig-link { font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--lime); }
@@ -226,7 +227,7 @@ article p, article li { font-size: 1.06rem; }
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Página inicial do blog">
-      <span class="brand-badge" aria-hidden="true">M</span>
+      <span class="brand-badge" aria-hidden="true"><img src="../foto.jpg" alt=""></span>
       <span class="brand-name">Marco Antonio<small>Marketing e vendas para negócio local</small></span>
     </a>
     <a class="ig-link" href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">@omarcocaetano</a>
@@ -238,7 +239,7 @@ article p, article li { font-size: 1.06rem; }
   <article>
     <span class="ep">Material do episódio 1 · Por que você compra isso?</span>
     <h1>5 jeitos de criar urgência sem mentir</h1>
-    <p class="byline"><span class="brand-badge" aria-hidden="true">M</span><span><b>Marco Antonio</b> · <a href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">@omarcocaetano</a></span></p>
+    <p class="byline"><span class="brand-badge" aria-hidden="true"><img src="../foto.jpg" alt=""></span><span><b>Marco Antonio</b> · <a href="https://instagram.com/omarcocaetano" target="_blank" rel="noopener">@omarcocaetano</a></span></p>
 
     <p class="lead">Você viu no vídeo: pesquisadores de Princeton e da Universidade de Chicago analisaram 11 mil sites de compra, e mais de 1 em cada 10 usava truques para empurrar a compra. Relógio que reinicia, estoque que nunca acaba, "fulano acabou de comprar" que nunca existiu.</p>
     <p><span class="mark">Urgência funciona. Mas cliente enganado compra uma vez. Cliente que confia volta.</span></p>
