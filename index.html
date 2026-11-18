@@ -212,6 +212,74 @@ footer a { color: var(--lime); text-decoration: none; }
    ========================================================= */
 const POSTS = [
   {
+    slug: "recompra",
+    titulo: "5 estratégias para fazer o cliente voltar",
+    apoio: "O cliente que já comprou é o mais barato que existe. Aqui estão as mensagens prontas para ele comprar de novo, sem pagar anúncio outra vez.",
+    resumo: "Separe quem já comprou, chame três dias depois, dê a novidade antes de todo mundo, lembre na hora da recompra e peça indicação no momento certo.",
+    data: "2026-11-18",
+    pilar: "Vendas",
+    palavra: "VOLTA",
+    ctaTitulo: "Quer montar a rotina de pós-venda da sua loja?",
+    ctaTexto: "Eu monto com você a lista de clientes, as mensagens e o calendário de quando chamar cada um, para a venda voltar sem depender de anúncio.",
+    wppMsg: "Oi Marco, vim pelo vídeo do cliente mais barato que existe e quero fazer o meu cliente voltar.",
+    corpo: `
+      <p class="lead">Você paga para trazer o cliente <span class="mark">uma vez só.</span> Depois, é só não esquecer dele.</p>
+      <p>Quem já comprou e gostou compra de novo. O problema é que, sem ninguém chamar, ele compra do primeiro que aparecer. Use as estratégias abaixo na ordem e troque o que está destacado pelo dado da sua loja.</p>
+
+      <h2><span class="n">1.</span> Separe quem já comprou</h2>
+      <p>No WhatsApp Business, crie a etiqueta <b>CLIENTES</b> e marque cada pessoa que já comprou de você. Comece pelas compras dos últimos três meses. Essa lista vale dinheiro: é para ela que vão todas as mensagens desta página.</p>
+      <div class="callout">
+        <ul>
+          <li><b>Como criar:</b> no WhatsApp Business, toque nos três pontinhos, depois em Etiquetas e em Nova etiqueta.</li>
+          <li><b>Como marcar:</b> segure a conversa do cliente e toque no ícone de etiqueta.</li>
+          <li><b>Como enviar para todos:</b> use a lista de transmissão só com quem está na etiqueta. Só recebe quem tem o seu número salvo, então peça para salvar na hora da compra.</li>
+        </ul>
+      </div>
+
+      <h2><span class="n">2.</span> Chame três dias depois da compra</h2>
+      <p>Quase ninguém faz isso, e é aí que o cliente lembra de você. Não venda nada nessa mensagem: só pergunte.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">3 dias depois</span><button class="copy-btn" type="button" data-copy="v1">Copiar</button></div>
+        <div class="bubble" id="v1">Oi, <span class="slot">[nome]</span>! Aqui é <span class="slot">[seu nome]</span> da <span class="slot">[loja]</span>. Passando pra saber se chegou tudo certinho com o <span class="slot">[produto]</span> e se você está gostando.</div>
+      </div>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Se ele respondeu que gostou</span><button class="copy-btn" type="button" data-copy="v2">Copiar</button></div>
+        <div class="bubble" id="v2">Que bom! Se puder, me manda uma foto usando. Vou adorar postar nos Stories e te marcar.</div>
+      </div>
+
+      <h2><span class="n">3.</span> Dê a novidade antes de todo mundo</h2>
+      <p>Chegou produto novo? Mande primeiro para a lista, antes de postar no Instagram. Quem já comprou se sente especial e costuma reservar na hora.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Novidade antecipada</span><button class="copy-btn" type="button" data-copy="v3">Copiar</button></div>
+        <div class="bubble" id="v3"><span class="slot">[nome]</span>, chegou <span class="slot">[produto novo]</span> e eu separei pra te mostrar antes de postar pra todo mundo. <span class="slot">[R$ preço]</span> ou <span class="slot">[X]</span>x de <span class="slot">[R$ parcela]</span>. Quer que eu guarde um pra você?</div>
+      </div>
+
+      <h2><span class="n">4.</span> Lembre na hora da recompra</h2>
+      <p>Quase todo produto acaba, gasta ou sai de época. Anote quando o cliente comprou e chame perto da hora de comprar de novo: o perfume que dura dois meses, a ração que acaba em 30 dias, a roupa da próxima estação.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Lembrete de recompra</span><button class="copy-btn" type="button" data-copy="v4">Copiar</button></div>
+        <div class="bubble" id="v4">Oi, <span class="slot">[nome]</span>! Faz <span class="slot">[tempo]</span> que você levou o <span class="slot">[produto]</span>, deve estar perto de acabar. Quer que eu já separe outro? Entrego <span class="slot">[dia]</span>.</div>
+      </div>
+
+      <h2><span class="n">5.</span> Peça indicação no momento certo</h2>
+      <p>O melhor momento para pedir indicação é logo depois que o cliente disse que gostou. Dê um motivo para ele indicar.</p>
+      <div class="reply">
+        <div class="reply-head"><span class="reply-tag">Pedido de indicação</span><button class="copy-btn" type="button" data-copy="v5">Copiar</button></div>
+        <div class="bubble" id="v5">Fico muito feliz que você gostou! Se tiver alguém que também ia gostar, me indica: quem vier da sua parte ganha <span class="slot">[benefício]</span>, e você também.</div>
+      </div>
+
+      <div class="callout">
+        <h2>Regras para não virar spam</h2>
+        <ul>
+          <li><b>Chame pelo nome</b> e cite o que a pessoa comprou. Mensagem genérica parece propaganda, e propaganda a gente ignora.</li>
+          <li><b>No máximo uma mensagem de venda por semana</b> para a mesma pessoa. A do pós-venda (dia 3) não conta, porque não vende nada.</li>
+          <li><b>Desconto só como última opção.</b> Antes, ofereça condição de pagamento, como parcelamento, ou a reserva antecipada.</li>
+          <li><b>Pediu para não receber?</b> Tire da etiqueta na hora.</li>
+        </ul>
+      </div>
+    `
+  },
+  {
     slug: "cliente",
     titulo: "Quanto custa cada cliente seu",
     apoio: "A calculadora do vídeo: coloque o que você investe, quantas conversas chegam e quantas vendas fecha, e veja onde o dinheiro está escapando.",
@@ -276,6 +344,9 @@ const POSTS = [
     ctaTexto: "Eu monto com você o pós-venda e o follow-up do seu negócio e treino quem atende o WhatsApp para manter o cliente por perto.",
     wppMsg: "Oi Marco, vim pelo carrossel do VOLTA e quero ajuda para o cliente voltar na minha loja.",
     corpo: `
+      <div class="callout">
+        <p><b>Veio pelo vídeo "O cliente mais barato que existe"?</b> As 5 estratégias para fazer quem já comprou voltar, com as mensagens prontas, estão aqui: <a href="#recompra">5 estratégias para fazer o cliente voltar</a>.</p>
+      </div>
       <p class="lead">O anúncio traz o cliente uma vez. <span class="mark">O que faz ele voltar é o que ficou em aberto.</span></p>
       <p>Nos anos 1920, a psicóloga Bluma Zeigarnik percebeu que garçons lembravam dos pedidos ainda não pagos e esqueciam os que já tinham fechado. O nome disso ficou <b>efeito Zeigarnik</b>: o que fica pela metade incomoda, e o cérebro puxa de volta até terminar. É o mesmo motivo de você assistir mais um episódio depois do gancho da série.</p>
       <p>No seu negócio, isso vira três hábitos simples.</p>
